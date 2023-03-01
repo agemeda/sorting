@@ -104,7 +104,7 @@ def merge_sorted(xs, cmp=cmp_standard):
     left = []
     right = []
 
-    if len(xs) == 1:
+    if len(xs) <= 1:
         return xs
     else:
         left = xs[div:]
@@ -138,7 +138,7 @@ def quick_sorted(xs, cmp=cmp_standard):
     You should not modify the input list xs in any way.
     '''
 
-    if len(xs) == 1:
+    if len(xs) <= 1:
         return xs
     else:
         split = len(xs)//2
