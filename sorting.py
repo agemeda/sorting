@@ -138,12 +138,11 @@ def quick_sorted(xs, cmp=cmp_standard):
     You should not modify the input list xs in any way.
     '''
 
-    import random
-    pivot = random.choice(xs)
     if len(xs) == 1:
         return xs
     else:
-        p = xs[pivot]
+        split = len(xs)//2
+        p = xs[(split)]
         lessp = [i for i in xs if cmp(i, p) == -1]
         greatp = [i for i in xs if cmp(i, p) == 1]
         equalp = [i for i in xs if cmp(i, p) == 0]
@@ -156,18 +155,4 @@ def quick_sort(xs, cmp=cmp_standard):
 
     '''
     EXTRA CREDIT:
-    The pseudocode is:
-        if xs has 1 element
-            it is sorted, so return xs
-        else
-            select a pivot value p
-            put all the values less than p in a list
-            put all the values greater than p in a list
-            put all the values equal to p in a list
-            sort the greater/less than lists recursively
-            return the concatenation of (less than, equal, greater than)
-
-    You should return a sorted version of the input list xs.
-    You should not modify the input list xs in any way.
-
     '''
