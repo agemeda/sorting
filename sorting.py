@@ -100,7 +100,7 @@ def merge_sorted(xs, cmp=cmp_standard):
     You should return a sorted version of the input list xs.
     You should not modify the input list xs in any way.
     '''
-    div = len(xs)//2
+    div = len(xs) // 2
     left = []
     right = []
 
@@ -141,7 +141,7 @@ def quick_sorted(xs, cmp=cmp_standard):
     if len(xs) <= 1:
         return xs
     else:
-        split = len(xs)//2
+        split = len(xs) // 2
         p = xs[(split)]
         lessp = [i for i in xs if cmp(i, p) == -1]
         greatp = [i for i in xs if cmp(i, p) == 1]
