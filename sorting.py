@@ -111,7 +111,7 @@ def merge_sorted(xs, cmp=cmp_standard):
         right = xs[:div]
         lsort = merge_sorted(left, cmp=cmp)
         rsort = merge_sorted(right, cmp=cmp)
-        return _merged(rsort, lsort, cmp=cmp)
+        return _merged(lsort, rsort, cmp=cmp)
 
 
 def quick_sorted(xs, cmp=cmp_standard):
